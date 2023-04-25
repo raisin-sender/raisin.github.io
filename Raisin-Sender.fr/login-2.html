@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>VNetwork.cc</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="panel/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="panel/assets/vendors/css/vendor.bundle.base.css">
+   
+    <link rel="stylesheet" href="panel/assets/css/style.css">
+    <link rel="shortcut icon" href="panel/assets/images/favicon.png" />
+    <script src="../kit.fontawesome.com/78cd1e5435.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="row w-100 m-0">
+          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+            <div class="card col-lg-4 mx-auto">
+              <div class="card-body px-5 py-5">
+                <h3 class="card-title text-center mb-3">Connexion</h3>
+                  <div class="form-group">
+                    <label>Pseudo</label>
+                    <input type="text" id="Pseudo" class="form-control p_input">
+                  </div>
+                  <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="password" class="form-control p_input">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-light btn-block enter-btn" onclick="submit()">Envoyer</button>
+                  </div>
+                  <p class="sign-up">Tu as pas de compte ?<a href="register.html"> S'inscrire</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <script>
+
+      document.addEventListener("keydown", function(event) {
+          if (event.keyCode === 13) {
+              event.preventDefault();
+              submit();
+          }
+      });
+
+      function submit(){
+      
+          $.ajax({
+              method: "POST",
+              url: "login.php",
+              data: {
+                  pseudo: $("#username").val(),
+                  password: $("#password").val()
+              },
+              dataType: 'json',
+          }).done(function(data) {
+              if (data.success) {
+                  document.location.href = "panel/index.html";
+              } else {
+                Notif({
+                  text: data.error,
+                  color: "error",
+                  timeout: 2000,
+                  icon: "error"
+                });
+              }
+          });
+      
+      }
+      
+      document.cookie = "google_analytics=as7v5s7fDEg7c8gb7zf8c45z";
+
+  </script>
+    <!-- plugins:js -->
+    <script src="panel/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="panel/assets/js/off-canvas.js"></script>
+    <script src="panel/assets/js/hoverable-collapse.js"></script>
+    <script src="panel/assets/js/misc.js"></script>
+    <script src="panel/assets/js/settings.js"></script>
+    <script src="panel/assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </body>
+
+<!-- Mirrored from vnetwork.cc/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2023 15:38:07 GMT -->
+</html>

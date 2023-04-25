@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&amp;display=swap');
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: Kanit;
+}
+
+@media (max-width: 1500px) {
+    section.offer {
+        padding: 80px 0 !important;
+        max-width: none !important;
+    }
+
+    section.offer .price {
+        width: 100%;
+    }
+}
+
+body {
+    margin: 0;
+    background: #050506;
+    justify-content: center;
+}
+
+
+section {
+    text-align: center;
+    padding-right: 100px !important;
+    padding-left: 100px !important;
+}
+
+section:nth-child(even) {
+    background-color: #0a0a0d;
+}
+
+section.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background: no-repeat url("../image/rain.svg");
+}
+
+section.landing h1 {
+    margin: 10px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+section.landing p {
+    margin: 0 0 30px 0;
+}
+
+section.landing a {
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #8f5fe8;
+    border-radius: 6px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+section.landing a:hover {
+    background: #a575ff;
+}
+
+section.landing .info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 80px 0;
+}
+
+section.stats article {
+}
+
+section.stats article h3 {
+    margin: 10px;
+    font-size: 60px;
+}
+
+section.stats article p {
+    margin: 10px;
+    font-size: 24px;
+}
+
+section.arguments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 120px 80px;
+    gap: 20px;
+}
+
+section.arguments article {
+    padding: 7px;
+    background: #0a0a0d;
+    flex-grow: 4;
+    width: 500px;
+    border-radius: 10px;
+}
+
+section.arguments article h3 {
+    margin: 0 0 20px 0;
+    font-size: 40px;
+}
+
+
+
+section.footer {
+    padding: 30px;
+    background-color: #0a0a0d !important;
+} 
+
+section.titlePrice {
+    padding: 30px;
+    background-color: #0a0a0d !important;
+} 
+
+/*===================*/
+
+.heart {
+	color: #e00;
+	animation: beat .15s infinite alternate;
+}
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+section.newPrice {
+    background-color: #050506 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 120px 80px;
+    gap: 20px;
+}
+
+section.newPrice article {
+    padding: 16px;
+    background: #0a0a0d;
+    width: 500px;
+    border-radius: 10px;
+}
+
+section.newPrice article h3 {
+    margin: 3px;
+    font-size: 35px;
+    color:#8f5fe8;
+}
+
+section.newPrice article h2 {
+    margin: 2px;
+    font-size: 30px;
+    color:#fff;
+}
+
+section.newPrice article a {
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #8f5fe8;
+    border-radius: 6px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
